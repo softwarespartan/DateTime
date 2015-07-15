@@ -205,9 +205,9 @@ dt_stop = dt + DateTime.ONE_DAY;
 <span class="comment">% loop until dt_stop</span>
 <span class="keyword">while</span> dt &lt;= dt_stop
 
-    <span class="comment">% do stuff ...</span>
+    % do stuff ...
 
-    <span class="comment">% update date time by 30 seconds</span>
+    % update date time by 30 seconds
     dt = dt + 30 * DateTime.ONE_SEC;
 <span class="keyword">end</span>
 </pre><p><b>Example 3</b>: Loop until some time delta is acheived.  Note that the subtraction of two DateTime objects returns a time delta (in seconds).</p><pre class="codeinput"><span class="comment">% init with fraction of year</span>
@@ -218,9 +218,9 @@ dt = dt_start;
 
 <span class="keyword">while</span> dt - dt_start &lt;= DateTime.ONE_HOUR
 
-    <span class="comment">% do stuff ...</span>
+    % do stuff ...
 
-    <span class="comment">% increment dt by 30 seconds</span>
+    % increment dt by 30 seconds
     dt = dt + 30 * DateTime.ONE_SEC;
 <span class="keyword">end</span>
 </pre><h2>The Colon Operator<a name="14"></a></h2><p>Using DateTime arithmetic and time deltas, arrays of DateTime objects with uniform time step can be initialized using the : operator.</p><p><b>Example 0</b>: initialize array of DateTime objects with 30 second time step</p><pre class="codeinput"><span class="comment">% init with year, doy, and second of day</span>
