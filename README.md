@@ -204,7 +204,6 @@ dt_stop = dt + DateTime.ONE_DAY;
 
 <span class="comment">% loop until dt_stop</span>
 <span class="keyword">while</span> dt &lt;= dt_stop
-
     % do stuff ...
 
     % update date time by 30 seconds
@@ -217,7 +216,6 @@ dt_start = DateTime.initWithFyear(2013.47839890);
 dt = dt_start;
 
 <span class="keyword">while</span> dt - dt_start &lt;= DateTime.ONE_HOUR
-
     % do stuff ...
 
     % increment dt by 30 seconds
