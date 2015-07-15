@@ -521,7 +521,7 @@ ydat = rand(size(dt));
 
 <span class="comment">% plot data with datetime axis lables using Matlab's built-in datetime objects</span>
 plot(dt.datetime, ydat);
-</pre><img vspace="5" hspace="5" src="DateTimeTutorial_01.png" alt=""> <p><b>Example 3</b>: Get date vectors for each DateTime object</p><pre class="codeinput">dv = dtUTC.datevec
+</pre><img vspace="5" hspace="5" src="html/DateTimeTutorial_01.png" alt=""> <p><b>Example 3</b>: Get date vectors for each DateTime object</p><pre class="codeinput">dv = dtUTC.datevec
 
 <span class="comment">% check the size</span>
 size(dv)
