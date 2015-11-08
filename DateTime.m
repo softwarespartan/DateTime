@@ -709,8 +709,26 @@ classdef DateTime < handle
             if numel(this)>1; str = cellstr(str); end
         end
         
-        function str = str     (this)
+        function str   = str     (this)
             str = datestr([this.serialDate], 'dd/mm/yyyy HH:MM:SS.FFF');
+            if numel(this)>1; str = cellstr(str); end
+        end
+        
+        function str   = gpsstr  (this)
+            % mem alloc 
+            str = repmat(' ',numel(this),5);
+            
+            % for each object
+            for i = 1:numel(this)
+                
+                % init str representation
+                tmp = [num2str(this(i).gpsWeek),num2str(this(i).gpsWeekDay)];
+                
+                % pad with zeros
+                str(i,:) = [repmat('0',1,max(0,5-numel(tmp))),tmp];
+            end
+            
+            % convert to cell array if array of objects
             if numel(this)>1; str = cellstr(str); end
         end
         
